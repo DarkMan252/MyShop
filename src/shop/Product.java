@@ -2,7 +2,7 @@ package shop;
 
 import java.time.LocalDate;
 
-public class Product {
+public class Product implements Comparable<Product>{
     String name;
     int price;
     String maker;
@@ -29,5 +29,10 @@ public class Product {
                 ", StartShelfLife=" + StartShelfLife +
                 ", StopShelfLife=" + StopShelfLife +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Product o) {
+        return this.name.compareToIgnoreCase(o.name)*101+this.maker.compareToIgnoreCase(o.maker)*1101+ (this.price-o.price);
     }
 }

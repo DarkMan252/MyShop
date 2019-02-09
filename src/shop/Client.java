@@ -7,6 +7,17 @@ public class Client extends Human {
         super(name, nick, password, adress, numberTelephone);
     }
 
+    @Override
+    public String toString() {
+        return "Client{" +
+                "name='" + name + '\'' +
+                ", nick='" + nick + '\'' +
+                ", password='" + password + '\'' +
+                ", adress='" + adress + '\'' +
+                ", numberTelephone='" + numberTelephone + '\'' +
+                '}';
+    }
+
     public void createOrder(Basket par){
 
     }

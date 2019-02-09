@@ -12,7 +12,7 @@ public class Basket {
 
     public boolean addBasket(Product par, int count, Shop par2) {
         boolean result = true;
-        int quantity = par2.findProduct(par);
+        int quantity = par2.quantityOffProduct(par);
         if (quantity == 0 || count > quantity) {
             System.out.println("Товар отсуствует на складе!");
             return false;
